@@ -1,6 +1,5 @@
 set guioptions-=T
 
-set relativenumber
 set colorcolumn=85
 
 set guifont=Inconsolata:h13
@@ -15,8 +14,6 @@ set antialias
 "colorscheme molokai
 "colorscheme vividchalk
 colorscheme solarized
-
-set bg=dark
 
 set go-=T
 set go-=l

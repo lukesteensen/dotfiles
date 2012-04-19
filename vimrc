@@ -1,15 +1,64 @@
-" Needed on some linux distros.
-" see http://www.adamlowe.me/2009/12/vim-destroys-all-other-rails-editors.html
+set nocompatible
 filetype off
 
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Vundle manages itself - required!
+Bundle 'gmarik/vundle'
+
+" My bundles
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-haml'
+Bundle 'vim-scripts/IndexedSearch'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'pangloss/vim-javascript'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'itspriddle/vim-jquery'
+Bundle 'ervandew/supertab'
+Bundle 'godlygeek/tabular'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'leshill/vim-json'
+Bundle 'mileszs/ack.vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'scratch.vim'
+
+" Colors
+Bundle 'tomasr/molokai'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'altercation/vim-colors-solarized'
+
+" Bundles I need to learn
+" Bundle 'mutewinter/LustyJuggler'
+" Bundle 'kien/ctrlp.vim'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'tpope/vim-rails'
+" Bundle 'tpope/vim-unimpaired'
+" Bundle 'henrik/vim-ruby-runner'
+" Bundle 'astashov/vim-ruby-debugger'
+" Bundle 'fholgado/minibufexpl.vim'
+" Bundle 'Rykka/ColorV'
+" Bundle 'tpope/vim-markdown'
+" Bundle 'vim-matchit'
+" Bundle 'taglist.vim'
+" Bundle 'tpope/vim-abolish'
+" Bundle 'tpope/vim-cucumber'
+" Bundle 'tpope/vim-afterimage'
+" Bundle 'scrooloose/snipmate-snippets'
+" Bundle 'msanders/snipmate.vim'
+" Bundle 'Shougo/neocomplcache'
 
 syntax on
 filetype plugin indent on
-
-" No need to maintain vi compatibility
-set nocompatible
 
 " Don't litter working directory with swp and backup files
 set backupdir=~/.vim/temp,.
@@ -32,8 +81,15 @@ set ignorecase
 set smartcase
 set incsearch
 set showmatch
-"set hlsearch
-"map <leader><space> :noh<CR>
+" set hlsearch
+" clear search highlighting
+" map <leader><space> :noh<CR>
+
+set relativenumber
+
+set background=dark
+" colorscheme molokai
+colorscheme solarized
 
 set encoding=utf-8
 set scrolloff=5
@@ -67,21 +123,19 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
+" nnoremap j gj
+" nnoremap k gk
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-let Tlist_Use_Right_Window = 1
 let NERDTreeWinSize = 40
 
 let mapleader = ","
 
 map <Leader>n :NERDTreeToggle<CR>
-map <Leader>t :TlistToggle<CR>
 map <Leader>l :CommandT<CR>
 map <Leader>f :CommandTFlush<CR>
 map <Leader>z :GundoToggle<CR>
@@ -90,9 +144,9 @@ map <Leader>a :Ack
 map <Leader>j :cn<CR>
 map <Leader>k :cp<CR>
 map <Leader>. :<up><CR>
-map <Leader>m :MiniBufExplorer<CR>
 map <Leader>rt :!ctags --extra=+f -R *<CR>
 
+let g:NERDSpaceDelims=1 
 let g:CommandTMaxHeight=20
 let g:gundo_preview_bottom = 1
 let g:gundo_right = 1
@@ -102,10 +156,9 @@ let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_enable_highlighting = 0
 
+" don't save fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 nnoremap <Leader>vv :e $MYVIMRC<CR>
-nnoremap <Leader>gg :e $MYGVIMRC<CR>
-nnoremap <Leader>ss :source $MYVIMRC<Bar>:source $MYGVIMRC<CR>
+nnoremap <Leader>ss :source $MYVIMRC<CR>
 
