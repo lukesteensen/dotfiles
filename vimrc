@@ -19,6 +19,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rake'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
@@ -28,6 +29,7 @@ Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'leshill/vim-json'
+Bundle 'ap/vim-css-color'
 Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scratch.vim'
@@ -161,4 +163,10 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 nnoremap <Leader>vv :e $MYVIMRC<CR>
 nnoremap <Leader>ss :source $MYVIMRC<CR>
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
 
