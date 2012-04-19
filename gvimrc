@@ -11,10 +11,6 @@ set guifont=Inconsolata:h13
 "set noantialias
 set antialias
 
-"colorscheme molokai
-"colorscheme vividchalk
-colorscheme solarized
-
 set go-=T
 set go-=l
 set go-=L
@@ -23,5 +19,5 @@ set go-=R
 
 macmenu &File.New\ Tab key=<nop>
 
-
+" not sure if this ever does anything
 highlight SpellBad term=underline gui=undercurl guisp=Orange
