@@ -170,3 +170,10 @@ autocmd InsertLeave * :set relativenumber
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
 
+" Make <ESC> and arrow keys work correctly for Command-T in terminal
+set ttimeoutlen=50
+if &term =~ "xterm" || &term =~ "screen"
+  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+  let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+  let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+endif
