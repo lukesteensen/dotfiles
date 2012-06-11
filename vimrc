@@ -67,7 +67,7 @@ set backupdir=~/.vim/temp,.
 set directory=~/.vim/temp,.
 
 set autoindent
-set smartindent
+" set smartindent
 
 set tabstop=2
 set shiftwidth=2
@@ -177,3 +177,6 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
+
+" Stop unindenting comments that being with #
+inoremap # X#
