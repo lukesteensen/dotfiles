@@ -164,9 +164,9 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 nnoremap <Leader>vv :e $MYVIMRC<CR>
 nnoremap <Leader>ss :source $MYVIMRC<CR>
 
+set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
-
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
 
