@@ -91,7 +91,9 @@ set relativenumber
 
 set background=dark
 " colorscheme molokai
-colorscheme solarized
+" colorscheme solarized
+colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night-Bright
 
 set encoding=utf-8
 set scrolloff=5
@@ -110,7 +112,7 @@ set laststatus=2
 
 set clipboard=unnamed
 
-"set wrap
+set nowrap
 set textwidth=80
 set formatoptions=qrn1
 
