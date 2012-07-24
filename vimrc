@@ -8,15 +8,15 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles
-Bundle 'git://git.wincent.com/command-t.git'
+"Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-bundler'
+"Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rake'
@@ -24,13 +24,13 @@ Bundle 'vim-scripts/IndexedSearch'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'itspriddle/vim-jquery'
+"Bundle 'itspriddle/vim-jquery'
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'leshill/vim-json'
-Bundle 'ap/vim-css-color'
-Bundle 'mileszs/ack.vim'
+"Bundle 'leshill/vim-json'
+"Bundle 'ap/vim-css-color'
+"Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scratch.vim'
 
@@ -38,6 +38,7 @@ Bundle 'scratch.vim'
 Bundle 'tomasr/molokai'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'chriskempson/tomorrow-theme'
 
 " Bundles I need to learn
 " Bundle 'mutewinter/LustyJuggler'
@@ -108,7 +109,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 
-set clipboard=unnamed
+"set clipboard=unnamed
 
 "set wrap
 set textwidth=80
@@ -117,14 +118,14 @@ set formatoptions=qrn1
 set list
 set listchars=tab:▸\ ,eol:¬
 
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
 " nnoremap j gj
 " nnoremap k gk
 
