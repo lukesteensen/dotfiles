@@ -4,6 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+set t_Co=256
+
 " Vundle manages itself - required!
 Bundle 'gmarik/vundle'
 
@@ -35,10 +37,16 @@ Bundle 'sjl/gundo.vim'
 Bundle 'scratch.vim'
 
 " Colors
+Bundle 'vydark'
 Bundle 'tomasr/molokai'
+Bundle 'cstrahan/grb256'
+Bundle 'jnurmine/Zenburn'
 Bundle 'tpope/vim-vividchalk'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'Lokaltog/vim-distinguished'
+Bundle '29decibel/codeschool-vim-theme'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'chriskempson/tomorrow-theme'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " Bundles I need to learn
 " Bundle 'mutewinter/LustyJuggler'
@@ -91,10 +99,16 @@ set showmatch
 set relativenumber
 
 set background=dark
-" colorscheme molokai
-" colorscheme solarized
-colorscheme Tomorrow-Night
-" colorscheme Tomorrow-Night-Bright
+" colorscheme grb256 " annoying line underline
+" colorscheme vydark " doesn't know python
+" colorscheme molokai " nice
+" colorscheme Zenburn " nice
+" colorscheme solarized " gui only
+colorscheme jellybeans " very nice
+" colorscheme codeschool " gui only
+" colorscheme distinguished " annoying line highlight
+" colorscheme Tomorrow-Night " very nice
+" colorscheme Tomorrow-Night-Bright " very nice
 
 set encoding=utf-8
 set scrolloff=5
