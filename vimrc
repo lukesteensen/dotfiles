@@ -185,10 +185,14 @@ nnoremap <Leader>vv :e $MYVIMRC<CR>
 nnoremap <Leader>ss :source $MYVIMRC<CR>
 
 set relativenumber
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
+autocmd InsertEnter * set number
+autocmd InsertLeave * set relativenumber
+autocmd BufEnter    * set relativenumber
+autocmd BufLeave    * set number
+autocmd WinEnter    * set relativenumber
+autocmd WinLeave    * set number
+autocmd FocusLost   * set number
+autocmd FocusGained * set relativenumber
 
 " Make <ESC> and arrow keys work correctly for Command-T in terminal
 set ttimeoutlen=50
