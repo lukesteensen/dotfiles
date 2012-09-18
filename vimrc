@@ -10,7 +10,6 @@ set t_Co=256
 Bundle 'gmarik/vundle'
 
 " My bundles
-"Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/nerdcommenter'
 "Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
@@ -22,6 +21,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rake'
+Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
@@ -50,7 +50,6 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " Bundles I need to learn
 " Bundle 'mutewinter/LustyJuggler'
-" Bundle 'kien/ctrlp.vim'
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'tpope/vim-rails'
 " Bundle 'tpope/vim-unimpaired'
@@ -155,7 +154,9 @@ let NERDTreeWinSize = 40
 let mapleader = ","
 
 map <Leader>n :NERDTreeToggle<CR>
-map <Leader>l :CommandT<CR>
+" map <Leader>l :CommandT<CR>
+map <Leader>l :CtrlPMixed<CR>
+map <Leader>p :CtrlPBuffer<CR>
 map <Leader>f :CommandTFlush<CR>
 map <Leader>z :GundoToggle<CR>
 map <Leader>s :Scratch<CR>
@@ -194,6 +195,9 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
+
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_working_path_mode = 0
 
 " Stop unindenting comments that being with #
 inoremap # X#
