@@ -117,6 +117,7 @@ set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
+set wildignore+=*.pyc
 set visualbell
 set cursorline
 set numberwidth=5
@@ -202,3 +203,9 @@ let g:ctrlp_working_path_mode = 0
 
 " Stop unindenting comments that being with #
 inoremap # X#
+
+" python stuff
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
+autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setlocal nocindent
+
