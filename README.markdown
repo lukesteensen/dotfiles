@@ -2,10 +2,10 @@
 
 Just some of my local configuration files. 
 
-At the moment it's pretty much just vim, but eventually I'd like to include all of them.
+Included right now there are settings for vim, ack, and rubygems, but I'll be
+adding more as I get to it. 
 
 ## Installation
 
-At the moment, just symlink ~/.vimrc and ~/.gvimrc to vimrc and gvimrc.
+Just clone the repo, `cd` into it, and run `rake`.
 
-Ultimately, I'd like to add a shell script or rake task to handle this.
