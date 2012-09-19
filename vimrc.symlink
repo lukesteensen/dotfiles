@@ -60,6 +60,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Colors
 Bundle 'vydark'
 Bundle 'tomasr/molokai'
+Bundle 'w0ng/vim-hybrid'
 Bundle 'cstrahan/grb256'
 Bundle 'jnurmine/Zenburn'
 Bundle 'tpope/vim-vividchalk'
@@ -98,16 +99,17 @@ set showmatch
 " map <leader><space> :noh<CR>
 
 set background=dark
+colorscheme hybrid
 " colorscheme grb256 " annoying line underline
 " colorscheme vydark " doesn't know python
-" colorscheme molokai " nice
-" colorscheme Zenburn " nice
+" colorscheme molokai
+" colorscheme Zenburn
 " colorscheme solarized " gui only
-colorscheme jellybeans " very nice
+" colorscheme jellybeans
 " colorscheme codeschool " gui only
 " colorscheme distinguished " annoying line highlight
-" colorscheme Tomorrow-Night " very nice
-" colorscheme Tomorrow-Night-Bright " very nice
+" colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night-Bright
 
 set encoding=utf-8
 set scrolloff=5
