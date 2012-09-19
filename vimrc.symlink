@@ -10,32 +10,52 @@ set t_Co=256
 Bundle 'gmarik/vundle'
 
 " My bundles
-Bundle 'scrooloose/nerdcommenter'
-"Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-repeat'
-"Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-eunuch'
+Bundle 'scratch.vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rake'
-Bundle 'kien/ctrlp.vim'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'Lokaltog/vim-powerline'
-"Bundle 'itspriddle/vim-jquery'
+Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-repeat'
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
-"Bundle 'leshill/vim-json'
-"Bundle 'ap/vim-css-color'
-Bundle 'mileszs/ack.vim'
-Bundle 'sjl/gundo.vim'
-Bundle 'scratch.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'vim-scripts/IndexedSearch'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" Bundles I need to learn
+" Bundle 'taglist.vim'
+" Bundle 'vim-matchit'
+" Bundle 'Rykka/ColorV'
+" Bundle 'gregsexton/gitv'
+" Bundle 'tpope/vim-rails'
+" Bundle 'ap/vim-css-color'
+" Bundle 'leshill/vim-json'
+" Bundle 'tpope/vim-abolish'
+" Bundle 'tpope/vim-bundler'
+" Bundle 'tpope/vim-cucumber'
+" Bundle 'tpope/vim-markdown'
+" Bundle 'Shougo/neocomplcache'
+" Bundle 'scrooloose/syntastic'
+" Bundle 'tpope/vim-afterimage'
+" Bundle 'tpope/vim-unimpaired'
+" Bundle 'itspriddle/vim-jquery'
+" Bundle 'msanders/snipmate.vim'
+" Bundle 'henrik/vim-ruby-runner'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'mutewinter/LustyJuggler'
+" Bundle 'fholgado/minibufexpl.vim'
+" Bundle 'astashov/vim-ruby-debugger'
+" Bundle 'scrooloose/snipmate-snippets'
 
 " Colors
 Bundle 'vydark'
@@ -48,25 +68,6 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle '29decibel/codeschool-vim-theme'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-
-" Bundles I need to learn
-" Bundle 'mutewinter/LustyJuggler'
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'tpope/vim-rails'
-" Bundle 'tpope/vim-unimpaired'
-" Bundle 'henrik/vim-ruby-runner'
-" Bundle 'astashov/vim-ruby-debugger'
-" Bundle 'fholgado/minibufexpl.vim'
-" Bundle 'Rykka/ColorV'
-" Bundle 'tpope/vim-markdown'
-" Bundle 'vim-matchit'
-" Bundle 'taglist.vim'
-" Bundle 'tpope/vim-abolish'
-" Bundle 'tpope/vim-cucumber'
-" Bundle 'tpope/vim-afterimage'
-" Bundle 'scrooloose/snipmate-snippets'
-" Bundle 'msanders/snipmate.vim'
-" Bundle 'Shougo/neocomplcache'
 
 syntax on
 filetype plugin indent on
@@ -95,8 +96,6 @@ set showmatch
 " set hlsearch
 " clear search highlighting
 " map <leader><space> :noh<CR>
-
-set relativenumber
 
 set background=dark
 " colorscheme grb256 " annoying line underline
@@ -156,7 +155,6 @@ let NERDTreeWinSize = 40
 let mapleader = ","
 
 map <Leader>n :NERDTreeToggle<CR>
-" map <Leader>l :CommandT<CR>
 map <Leader>l :CtrlPMixed<CR>
 map <Leader>p :CtrlPBuffer<CR>
 map <Leader>f :CommandTFlush<CR>
