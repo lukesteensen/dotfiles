@@ -13,9 +13,12 @@ Bundle 'gmarik/vundle'
 Bundle 'scratch.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-rails'
 Bundle 'mileszs/ack.vim'
+Bundle 'mattn/webapi-vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-repeat'
 Bundle 'ervandew/supertab'
@@ -24,6 +27,8 @@ Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'pangloss/vim-javascript'
@@ -37,7 +42,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'vim-matchit'
 " Bundle 'Rykka/ColorV'
 " Bundle 'gregsexton/gitv'
-" Bundle 'tpope/vim-rails'
 " Bundle 'ap/vim-css-color'
 " Bundle 'leshill/vim-json'
 " Bundle 'tpope/vim-abolish'
@@ -157,7 +161,7 @@ let NERDTreeWinSize = 40
 let mapleader = ","
 
 map <Leader>n :NERDTreeToggle<CR>
-map <Leader>l :CtrlPMixed<CR>
+map <Leader>l :CtrlP<CR>
 map <Leader>p :CtrlPBuffer<CR>
 map <Leader>f :CommandTFlush<CR>
 map <Leader>z :GundoToggle<CR>
