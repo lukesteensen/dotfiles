@@ -21,6 +21,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-abolish'
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-endwise'
@@ -44,7 +45,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'gregsexton/gitv'
 " Bundle 'ap/vim-css-color'
 " Bundle 'leshill/vim-json'
-" Bundle 'tpope/vim-abolish'
 " Bundle 'tpope/vim-bundler'
 " Bundle 'tpope/vim-cucumber'
 " Bundle 'tpope/vim-markdown'
@@ -216,4 +216,8 @@ inoremap # X#
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setlocal nocindent
+
+" erb surrounds outside rails
+let g:surround_{char2nr('-')} = "<% \r %>"
+let g:surround_{char2nr('=')} = "<%= \r %>"
 
