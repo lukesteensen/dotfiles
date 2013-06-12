@@ -21,6 +21,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-abolish'
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
@@ -32,13 +33,14 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'guns/vim-clojure-static'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-" Bundles I need to learn
+" Bundles to check out later
 " Bundle 'taglist.vim'
 " Bundle 'vim-matchit'
 " Bundle 'Rykka/ColorV'
@@ -60,6 +62,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'fholgado/minibufexpl.vim'
 " Bundle 'astashov/vim-ruby-debugger'
 " Bundle 'scrooloose/snipmate-snippets'
+" Bundle 'kien/rainbow_parentheses.vim'
 
 " Colors
 Bundle 'vydark'
@@ -140,14 +143,14 @@ set formatoptions=qrn1
 set list
 set listchars=tab:▸\ ,eol:¬
 
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-"nnoremap <left> <nop>
-"nnoremap <right> <nop>
-"inoremap <up> <nop>
-"inoremap <down> <nop>
-"inoremap <left> <nop>
-"inoremap <right> <nop>
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+" nnoremap <left> <nop>
+" nnoremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 " nnoremap j gj
 " nnoremap k gk
 
@@ -163,7 +166,7 @@ let mapleader = ","
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>l :CtrlP<CR>
 map <Leader>p :CtrlPBuffer<CR>
-map <Leader>f :CommandTFlush<CR>
+" map <Leader>f :CommandTFlush<CR>
 map <Leader>z :GundoToggle<CR>
 map <Leader>s :Scratch<CR>
 map <Leader>a :Ack 
@@ -176,11 +179,11 @@ let g:NERDSpaceDelims=1
 let g:CommandTMaxHeight=20
 let g:gundo_preview_bottom = 1
 let g:gundo_right = 1
-let g:syntastic_check_on_open=1
-let g:syntastic_echo_current_error=1
-let g:syntastic_enable_signs=1
-let g:syntastic_enable_balloons = 1
-let g:syntastic_enable_highlighting = 0
+" let g:syntastic_check_on_open=1
+" let g:syntastic_echo_current_error=1
+" let g:syntastic_enable_signs=1
+" let g:syntastic_enable_balloons = 1
+" let g:syntastic_enable_highlighting = 0
 
 " don't save fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
@@ -199,23 +202,18 @@ autocmd FocusLost   * set number
 autocmd FocusGained * set relativenumber
 
 " Make <ESC> and arrow keys work correctly for Command-T in terminal
-set ttimeoutlen=50
-if &term =~ "xterm" || &term =~ "screen"
-  let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
-  let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-  let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
-endif
+" set ttimeoutlen=50
+" if &term =~ "xterm" || &term =~ "screen"
+  " let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+  " let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+  " let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+" endif
 
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_working_path_mode = 0
 
 " Stop unindenting comments that being with #
 inoremap # X#
-
-" python stuff
-autocmd FileType python setlocal shiftwidth=4 tabstop=4
-autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setlocal nocindent
 
 " erb surrounds outside rails
 let g:surround_{char2nr('-')} = "<% \r %>"
