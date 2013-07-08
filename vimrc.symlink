@@ -29,6 +29,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'nono/vim-handlebars'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/nerdtree'
@@ -38,6 +39,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/IndexedSearch'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Bundles to check out later
@@ -62,7 +64,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'fholgado/minibufexpl.vim'
 " Bundle 'astashov/vim-ruby-debugger'
 " Bundle 'scrooloose/snipmate-snippets'
-" Bundle 'kien/rainbow_parentheses.vim'
 
 " Colors
 Bundle 'vydark'
@@ -218,4 +219,9 @@ inoremap # X#
 " erb surrounds outside rails
 let g:surround_{char2nr('-')} = "<% \r %>"
 let g:surround_{char2nr('=')} = "<%= \r %>"
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
