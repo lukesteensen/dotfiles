@@ -166,6 +166,7 @@ let NERDTreeWinSize = 40
 let mapleader = ","
 
 map <Leader>n :NERDTreeToggle<CR>
+map <Leader>nf :NERDTreeFind<CR>
 map <Leader>l :CtrlP<CR>
 map <Leader>p :CtrlPBuffer<CR>
 " map <Leader>f :CommandTFlush<CR>
@@ -174,7 +175,6 @@ map <Leader>s :Scratch<CR>
 map <Leader>a :Ack
 map <Leader>j :cn<CR>
 map <Leader>k :cp<CR>
-map <Leader>. :<up><CR>
 map <Leader>rt :!ctags --extra=+f -R *<CR>
 
 let g:NERDSpaceDelims=1
