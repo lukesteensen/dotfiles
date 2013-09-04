@@ -34,6 +34,7 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'slim-template/vim-slim'
 Bundle 'guns/vim-clojure-static'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
@@ -126,7 +127,7 @@ set showcmd
 set hidden
 set wildmenu
 set wildmode=list:longest
-set wildignore+=*.pyc
+set wildignore+=*.pyc,*/tmp/*
 set visualbell
 set cursorline
 set numberwidth=5
@@ -170,13 +171,13 @@ map <Leader>p :CtrlPBuffer<CR>
 " map <Leader>f :CommandTFlush<CR>
 map <Leader>z :GundoToggle<CR>
 map <Leader>s :Scratch<CR>
-map <Leader>a :Ack 
+map <Leader>a :Ack
 map <Leader>j :cn<CR>
 map <Leader>k :cp<CR>
 map <Leader>. :<up><CR>
 map <Leader>rt :!ctags --extra=+f -R *<CR>
 
-let g:NERDSpaceDelims=1 
+let g:NERDSpaceDelims=1
 let g:CommandTMaxHeight=20
 let g:gundo_preview_bottom = 1
 let g:gundo_right = 1
