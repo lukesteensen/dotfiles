@@ -44,15 +44,15 @@ plugins=(brew git golang heroku postgres)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/share/python:/usr/local/share/npm/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/share/python:/usr/local/share/npm/bin:$PATH"
 
 # Customize to your needs...
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
 
-alias l="ls -la"
+# alias l="ls -la"
 
 # Fix ruby ssl issues?
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -61,4 +61,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # ssh-add
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+export BOXEN_SRC_DIR=/Users/luke/dev
