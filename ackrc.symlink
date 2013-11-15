@@ -1,4 +1,5 @@
 --type-add=html:ext:haml
+--type-add=html:ext:slim
 --type-add=css:ext:sass,scss
 --ignore-file=ext:log
 
