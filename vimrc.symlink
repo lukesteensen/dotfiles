@@ -23,6 +23,7 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-abolish'
+Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-endwise'
@@ -33,7 +34,6 @@ Bundle 'nono/vim-handlebars'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'groenewege/vim-less'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'slim-template/vim-slim'
 Bundle 'guns/vim-clojure-static'
 Bundle 'pangloss/vim-javascript'
@@ -161,11 +161,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-let NERDTreeWinSize = 40
+let NERDTreeWinSize = 30
 
 let mapleader = ","
 
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>nt :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFind<CR>
 map <Leader>l :CtrlP<CR>
 map <Leader>p :CtrlPBuffer<CR>
@@ -194,25 +194,11 @@ nnoremap <Leader>vv :e $MYVIMRC<CR>
 nnoremap <Leader>ss :source $MYVIMRC<CR>
 
 set relativenumber
-autocmd InsertEnter * set number
-autocmd InsertLeave * set relativenumber
-autocmd BufEnter    * set relativenumber
-autocmd BufLeave    * set number
-autocmd WinEnter    * set relativenumber
-autocmd WinLeave    * set number
-autocmd FocusLost   * set number
-autocmd FocusGained * set relativenumber
-
-" Make <ESC> and arrow keys work correctly for Command-T in terminal
-" set ttimeoutlen=50
-" if &term =~ "xterm" || &term =~ "screen"
-  " let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
-  " let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-  " let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
-" endif
 
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_working_path_mode = 0
+
+let g:airline_powerline_fonts = 1
 
 " Stop unindenting comments that being with #
 inoremap # X#
