@@ -195,6 +195,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 nnoremap <Leader>vv :e $MYVIMRC<CR>
 nnoremap <Leader>ss :source $MYVIMRC<CR>
 
+set number
 set relativenumber
 
 let g:ctrlp_match_window_reversed = 0
