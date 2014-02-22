@@ -25,6 +25,7 @@ Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-vinegar'
 Bundle 'rodjek/vim-puppet'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
@@ -32,7 +33,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'nono/vim-handlebars'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'groenewege/vim-less'
-Bundle 'scrooloose/nerdtree'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'slim-template/vim-slim'
 Bundle 'guns/vim-clojure-static'
@@ -71,7 +71,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'vydark'
 Bundle 'tomasr/molokai'
 Bundle 'w0ng/vim-hybrid'
-Bundle 'cstrahan/grb256'
 Bundle 'jnurmine/Zenburn'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'nanotech/jellybeans.vim'
@@ -110,7 +109,6 @@ set showmatch
 
 set background=dark
 colorscheme hybrid
-" colorscheme grb256 " annoying line underline
 " colorscheme vydark " doesn't know python
 " colorscheme molokai
 " colorscheme Zenburn
