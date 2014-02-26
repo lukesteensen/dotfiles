@@ -7,6 +7,8 @@ adding more as I get to it.
 
 ## Installation
 
-I use GNU Stow to manage my dotfiles.
+I use [GNU Stow][0] to manage my dotfiles.
 
 To install, just clone the repo, `cd` into it, and run `stow all`.
+
+[0]: http://www.gnu.org/software/stow/
