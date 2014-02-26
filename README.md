@@ -9,6 +9,7 @@ adding more as I get to it.
 
 I use [GNU Stow][0] to manage my dotfiles.
 
-To install, just clone the repo, `cd` into it, and run `stow all`.
+To install, just clone the repo, `cd` into it, and run `stow zsh vim other`, or
+whichever sets you want to install.
 
 [0]: http://www.gnu.org/software/stow/
