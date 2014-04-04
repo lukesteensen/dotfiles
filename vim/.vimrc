@@ -11,12 +11,12 @@ Bundle 'gmarik/vundle'
 
 " My bundles
 Bundle 'scratch.vim'
+Bundle 'rking/ag.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-rails'
-Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-sleuth'
@@ -33,7 +33,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'nono/vim-handlebars'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'groenewege/vim-less'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'chase/vim-ansible-yaml'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'slim-template/vim-slim'
 Bundle 'guns/vim-clojure-static'
 Bundle 'pangloss/vim-javascript'
@@ -171,10 +173,14 @@ map <Leader>p :CtrlPBuffer<CR>
 " map <Leader>f :CommandTFlush<CR>
 map <Leader>z :GundoToggle<CR>
 map <Leader>s :Scratch<CR>
-map <Leader>a :Ack
+map <Leader>a :Ag 
 map <Leader>j :cn<CR>
 map <Leader>k :cp<CR>
 map <Leader>rt :!ctags --extra=+f -R *<CR>
+
+map <Leader>rb :call RunCurrentSpecFile()<CR>
+map <Leader>rf :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
 
 let g:NERDSpaceDelims=1
 let g:CommandTMaxHeight=20
