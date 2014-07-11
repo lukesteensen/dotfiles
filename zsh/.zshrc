@@ -15,4 +15,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=($fpath /usr/local/share/zsh-completions)
 
-export PATH="bin:$HOME/bin:/usr/local/bin:$PATH"
+export PATH="bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export DOCKER_HOST=tcp://localhost:4243
