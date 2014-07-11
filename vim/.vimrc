@@ -45,6 +45,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'ConradIrwin/vim-bracketed-paste'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Bundles to check out later
