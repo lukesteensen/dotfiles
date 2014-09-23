@@ -87,8 +87,8 @@ syntax on
 filetype plugin indent on
 
 " Don't litter working directory with swp and backup files
-set backupdir=~/.vim/temp,.
-set directory=~/.vim/temp,.
+set backupdir=~/.vim/tmp,.
+set directory=~/.vim/tmp,.
 
 set autoindent
 " set smartindent
