@@ -25,6 +25,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'nono/vim-handlebars'
 Plug 'jnwhiteh/vim-golang'
 Plug 'groenewege/vim-less'
+Plug 'racer-rust/vim-racer'
 Plug 'thoughtbot/vim-rspec'
 Plug 'chase/vim-ansible-yaml'
 Plug 'elixir-lang/vim-elixir'
@@ -71,7 +72,7 @@ set sidescrolloff=5
 set showmode
 set hidden
 set wildmode=list:longest
-set wildignore+=*.pyc,*/tmp/*
+set wildignore+=*.pyc,*/tmp/*,*/target/*
 set visualbell
 set cursorline
 set numberwidth=5
@@ -125,3 +126,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+let g:racer_cmd = $HOME . "/dev/racer/target/release/racer"
+let $RUST_SRC_PATH=expand('~/dev/rust/src/')
+let g:SuperTabDefaultCompletionType = "context"
