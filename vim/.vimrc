@@ -131,3 +131,5 @@ au Syntax * RainbowParenthesesLoadBraces
 let g:racer_cmd = $HOME . "/dev/racer/target/release/racer"
 let $RUST_SRC_PATH=expand('~/dev/rust/src/')
 let g:SuperTabDefaultCompletionType = "context"
+
+let g:NERDSpaceDelims=1
