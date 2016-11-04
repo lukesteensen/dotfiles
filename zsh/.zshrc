@@ -18,9 +18,9 @@ source $(brew --prefix nvm)/nvm.sh
 fpath=($fpath /usr/local/share/zsh-completions)
 
 export PATH="bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="$HOME/.multirust/toolchains/stable/cargo/bin:$PATH"
-export DOCKER_HOST=tcp://localhost:4243
+export PATH="$HOME/.cargo/bin:$PATH"
 export DISABLE_AUTO_TITLE=true
+export GOPATH="$HOME/dev/gopath"
 
 alias gs='git status'
 alias gdc='git diff --cached'
