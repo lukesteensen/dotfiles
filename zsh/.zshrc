@@ -24,3 +24,7 @@ export GOPATH="$HOME/dev/gopath"
 
 alias gs='git status'
 alias gdc='git diff --cached'
+
+# https://github.com/sfackler/rust-openssl/issues/255
+export OPENSSL_INCLUDE_DIR=`brew --prefix openssl`/include
+export OPENSSL_LIB_DIR=`brew --prefix openssl`/lib
