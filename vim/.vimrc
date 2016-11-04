@@ -27,7 +27,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'nono/vim-handlebars'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'groenewege/vim-less'
-Plug 'racer-rust/vim-racer'
+Plug 'lukesteensen/vim-racer', { 'branch': 'new_racer' }
 Plug 'thoughtbot/vim-rspec'
 Plug 'pforman/vim-terraform'
 Plug 'chase/vim-ansible-yaml'
@@ -131,7 +131,6 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 let g:racer_cmd = $HOME . "/dev/racer/target/release/racer"
-let $RUST_SRC_PATH=expand('~/dev/rust/src/')
 let g:SuperTabDefaultCompletionType = "context"
 
 let g:NERDSpaceDelims=1
