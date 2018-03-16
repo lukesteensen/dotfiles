@@ -1,30 +1,39 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+PURS_PATH="$HOME/dev/purs"
 
-ZSH_THEME="juanghurtado"
+function zle-line-init zle-keymap-select {
+  PROMPT=`$PURS_PATH/target/release/purs prompt -k "$KEYMAP" -r "$?"`
+  zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
 
-COMPLETION_WAITING_DOTS="true"
+autoload -Uz add-zsh-hook
 
-plugins=(brew git go heroku postgres)
+function _prompt_purs_precmd() {
+  $PURS_PATH/target/release/purs precmd
+}
+add-zsh-hook precmd _prompt_purs_precmd
 
-source $ZSH/oh-my-zsh.sh
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-source $(brew --prefix nvm)/nvm.sh
-
-# zsh-completions
-# fpath=(/usr/local/share/zsh-completions $fpath)
-fpath=($fpath /usr/local/share/zsh-completions)
-
-export PATH="bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export DISABLE_AUTO_TITLE=true
-export GOPATH="$HOME/dev/gopath"
 
+alias l='ls -lha'
+alias ll='ls -lh'
 alias gs='git status'
+alias gd='git diff'
 alias gdc='git diff --cached'
 
-# https://github.com/sfackler/rust-openssl/issues/255
-export OPENSSL_INCLUDE_DIR=`brew --prefix openssl`/include
-export OPENSSL_LIB_DIR=`brew --prefix openssl`/lib
+autoload -U compinit
+compinit
+
+export CLICOLOR=1
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
+setopt complete_in_word
+setopt always_to_end
+
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+
+export WORDCHARS=''
+
+fpath=(/usr/local/share/zsh-completions $fpath)
