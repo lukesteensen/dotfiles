@@ -1,10 +1,16 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/bundle')
 
-Plug 'scratch.vim'
 Plug 'rking/ag.vim'
 Plug 'fatih/vim-go'
 Plug 'sjl/gundo.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'chr4/nginx.vim'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
@@ -15,6 +21,7 @@ Plug 'cespare/vim-toml'
 Plug 'tpope/vim-abolish'
 Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
+Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-vinegar'
@@ -88,9 +95,9 @@ set formatoptions+=qrn1
 set list
 set listchars=tab:▸\ ,eol:¬
 
-let mapleader = ","
+let mapleader = "\\"
 
-map <Leader>l :CtrlP<CR>
+map <Leader>ff :CtrlP<CR>
 map <Leader>p :CtrlPBuffer<CR>
 map <Leader>z :GundoToggle<CR>
 map <Leader>s :Scratch<CR>
@@ -134,3 +141,5 @@ let g:racer_cmd = $HOME . "/dev/racer/target/release/racer"
 let g:SuperTabDefaultCompletionType = "context"
 
 let g:NERDSpaceDelims=1
+
+" let g:rustfmt_autosave = 1
