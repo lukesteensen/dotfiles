@@ -37,3 +37,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|
 export WORDCHARS=''
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# https://github.com/sfackler/rust-openssl/issues/255
+export OPENSSL_INCLUDE_DIR=`brew --prefix openssl`/include
+export OPENSSL_LIB_DIR=`brew --prefix openssl`/lib
+export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
