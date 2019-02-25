@@ -6,10 +6,8 @@ endif
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'rking/ag.vim'
 Plug 'fatih/vim-go'
 Plug 'sjl/gundo.vim'
-Plug 'kien/ctrlp.vim'
 Plug 'chr4/nginx.vim'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-rake'
@@ -26,6 +24,7 @@ Plug 'godlygeek/tabular'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
+Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -34,10 +33,10 @@ Plug 'rust-lang/rust.vim'
 Plug 'nono/vim-handlebars'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'groenewege/vim-less'
-Plug 'lukesteensen/vim-racer', { 'branch': 'new_racer' }
 Plug 'thoughtbot/vim-rspec'
 Plug 'pforman/vim-terraform'
 Plug 'chase/vim-ansible-yaml'
+Plug 'junegunn/limelight.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'slim-template/vim-slim'
 Plug 'guns/vim-clojure-static'
@@ -49,7 +48,9 @@ Plug 'vim-scripts/IndexedSearch'
 Plug 'eapache/rainbow_parentheses.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'lukesteensen/vim-racer', { 'branch': 'new_racer' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Colors
 Plug 'w0ng/vim-hybrid'
@@ -97,11 +98,8 @@ set listchars=tab:▸\ ,eol:¬
 
 let mapleader = "\\"
 
-map <Leader>ff :CtrlP<CR>
-map <Leader>p :CtrlPBuffer<CR>
 map <Leader>z :GundoToggle<CR>
 map <Leader>s :Scratch<CR>
-map <Leader>a :Ag  <BS>
 
 map <Leader>rb :call RunCurrentSpecFile()<CR>
 map <Leader>rf :call RunNearestSpec()<CR>
@@ -118,9 +116,6 @@ nnoremap <Leader>ss :source $MYVIMRC<CR>
 
 set number
 set relativenumber
-
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_working_path_mode = 0
 
 let g:airline_powerline_fonts = 1
 
@@ -142,4 +137,10 @@ let g:SuperTabDefaultCompletionType = "context"
 
 let g:NERDSpaceDelims=1
 
-" let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+let $FZF_DEFAULT_OPTS = '--reverse'
+map <silent> <leader>ff :Files<CR>
+map <silent> <leader>fb :Buffers<CR>
+map <silent> <leader>ft :Tags<CR>
